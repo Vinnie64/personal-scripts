@@ -8,8 +8,10 @@ nvidia-modprobe
 export ZSH=$HOME/.oh-my-zsh
 git clone https://github.com/fittiboy/personal-scripts ~/scripts
 chmod +x ~/scripts/*
+mkdir -p $HOME/.config
 git clone https://github.com/fittiboy/dotfiles ~/dotfiles
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/tobi-wan-kenobi/bumblebee-status ~/.config/bumblebee-status
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 sudo rm -f .zshrc .vimrc .tmux.conf
 mkdir -p $HOME/.config/i3/
