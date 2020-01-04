@@ -17,6 +17,19 @@ git clone https://github.com/fittiboy/dotfiles ~/dotfiles
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # Install bumblebee-status for i3-gaps
 git clone https://github.com/tobi-wan-kenobi/bumblebee-status ~/.config/bumblebee-status
+# Install yaourt
+sudo pacman -S --needed base-devel git wget yajl
+git clone https://aur.archlinux.org/package-query.git
+cd package-query/
+makepkg -si
+cd ..
+git clone https://aur.archlinux.org/yaourt.git
+cd yaourt/
+makepkg -si
+cd ..
+sudo rm -dR yaourt/ package-query/
+# Install mini-greeter
+yaourt -S lightdm-mini-greeter
 # Install Oh-My-Zsh!
 export ZSH=$HOME/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -30,5 +43,7 @@ python3.8 $HOME/dotfiles/export.py
 chsh -s /bin/zsh
 # Install Vundle Plugins
 vim +PluginInstall +qall
+# Install bumblebee-status module dependencies
+python -m pip install psutil
 echo "Restart your terminal for all changes to take effect!"
 
