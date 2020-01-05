@@ -1,5 +1,6 @@
 #!/bin/sh
 sudo pacman -Syu
+sudo pacman -S pacman-contrib
 # Update mirrorlist
 echo "Updating mirror list... one moment please"
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/mirrorlist-update)"
