@@ -51,7 +51,8 @@ sudo rm -f .zshrc .vimrc .tmux.conf
 # Export config files
 mkdir -p $HOME/.config/i3/
 mkdir -p $HOME/.config/alacritty/
-python3.8 $HOME/dotfiles/export.py
+sudo mkdir -p /etc/X11/xorg.conf.d/
+sudo python3.8 $HOME/dotfiles/export.py
 # Set default shell to zsh
 chsh -s /bin/zsh
 # Install Vundle Plugins
