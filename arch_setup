@@ -4,7 +4,8 @@ cd /home/fitti
 # Acticate multilib
 sudo vim /etc/pacman.conf +"g/\#\[multilib\]/normal 0xjx" +wq
 # Install ProtonMail Bridge
-mkdir /tmp/build && cd /tmp/build
+sudo mkdir /tmp/build
+cd /tmp/build
 wget https://protonmail.com/download/PKGBUILD
 makepkg -si
 cd /home/fitti
