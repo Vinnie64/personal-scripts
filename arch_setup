@@ -1,5 +1,6 @@
 #!/bin/sh
-# UNCOMMENT MULTILIB LINE IN PACMAN.CONF
+# Acticate multilib
+sudo vim /etc/pacman.conf +"g/\[multilib\]/normal 0xjx" +w
 # Sync time
 sudo timedatectl set-ntp true
 sudo pacman -Syu
