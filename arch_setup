@@ -1,4 +1,6 @@
 #!/bin/sh
+# Sync time
+sudo timedatectl set-ntp true
 sudo pacman -Syu
 sudo pacman -S pacman-contrib
 # Update mirrorlist
