@@ -1,4 +1,5 @@
 #!/bin/sh
+# UNCOMMENT MULTILIB LINE IN PACMAN.CONF
 sudo pacman -Syu
 sudo pacman -S pacman-contrib
 # Update mirrorlist
