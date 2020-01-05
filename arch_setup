@@ -54,9 +54,9 @@ sudo python -m pip install psutil
 sudo sh ~/scripts/grub-update
 sudo systemctl enable lightdm
 sudo systemctl enable NetworkManager
+sudo nvidia-xconfig
 echo "Restart your terminal for all changes to take effect!"
 echo "You remember to set up the following:
 
-- X (nvidia-xconfig)
 - lightdm
 - lightdm-mini-greeter"
