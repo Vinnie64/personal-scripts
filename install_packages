@@ -61,6 +61,6 @@ cronie
 yajl
 ttf-font-awesome
 compton
-nm-connection-manager
+nm-connection-editor
 network-manager-applet
 

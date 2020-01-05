@@ -17,7 +17,7 @@ sudo pacman -S pacman-contrib
 echo "Updating mirror list... one moment please"
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/mirrorlist-update)"
 # Install packages
-sudo pacman -S $(curl -fsSL https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/install_packages) 
+sudo pacman -S $(curl -fsSL https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/install_packages)
 nvidia-modprobe
 # Install scripts repo
 git clone https://github.com/fittiboy/personal-scripts ~/scripts
