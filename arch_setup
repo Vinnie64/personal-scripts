@@ -4,12 +4,12 @@ cd /home/fitti
 # Acticate multilib
 sudo vim /etc/pacman.conf +"g/\#\[multilib\]/normal 0xjx" +wq
 # Install ProtonMail Bridge
-mkdir tmp/build
-cd tmp/build
+mkdir pmb
+cd pmb
 wget https://protonmail.com/download/PKGBUILD
 makepkg -si
 cd ..
-rm -rf tmp
+rm -rf pmb
 # Sync time
 sudo timedatectl set-ntp true
 sudo pacman -Syu
