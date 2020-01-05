@@ -56,7 +56,8 @@ sudo systemctl enable lightdm
 sudo systemctl enable NetworkManager
 sudo nvidia-xconfig
 echo "Restart your terminal for all changes to take effect!"
-echo "You remember to set up the following:
+echo "Remember to set up the following:
 
+- X (check /etc/X11/xorg.conf)
 - lightdm
 - lightdm-mini-greeter"
