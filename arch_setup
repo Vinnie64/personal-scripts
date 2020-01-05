@@ -45,7 +45,7 @@ chsh -s /bin/zsh
 # Install Vundle Plugins
 vim +PluginInstall +qall
 # Install bumblebee-status module dependencies
-python -m pip install psutil
+sudo python -m pip install psutil
 # Make grub config
 sudo sh ~/scripts/grub-update
 echo "Restart your terminal for all changes to take effect!"
