@@ -65,4 +65,14 @@ nm-connection-editor
 network-manager-applet
 apache
 flameshot
+flashplugin
+gvfs
+arch-install-scripts
+okular
+gimp
+pulseaudio
+usbutils
+dmenu
+os-prober
+alsa-firmware
 
