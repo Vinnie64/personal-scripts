@@ -1,0 +1,32 @@
+#!/bin/python
+from pathlib import Path
+
+
+home = str(Path.home())
+
+
+def main():
+    try:
+        choice = int(input("Do you have\n\t1 - A laptop\n\t2 - A desktop PC\n\t\t"))
+    except:
+        print("Please enter a valid input! [1/2]")
+        main()
+        return
+    if choice >= 3:
+        print("Please enter either 1 or 2!")
+        main()
+        return
+    elif choice == 1:
+        makefile("battery ")
+    else:
+        makefile("")
+
+def makefile(string):
+    with open(f"{home}/.laptop", "w") as laptopfile:
+        laptopfile.write(string)
+    print("The ~/.laptop file has been created, specifying",
+          "whether or not battery status gets shown on your",
+          "status bar")
+
+if __name__ == "__main__":
+    main()
