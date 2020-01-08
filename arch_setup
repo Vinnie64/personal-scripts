@@ -28,7 +28,7 @@ sudo pacman -S $(curl -fsSL https://raw.githubusercontent.com/Fittiboy/personal-
 nvidia-modprobe
 
 # Specify Laptop or desktop
-sh -c "$(curl -fsSl https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/desktop_or_laptop)"
+python -c "$(curl -fsSl https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/desktop_or_laptop)"
 
 # Install scripts repo
 git clone https://github.com/fittiboy/personal-scripts ~/scripts
