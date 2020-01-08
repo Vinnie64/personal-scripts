@@ -83,6 +83,9 @@ vim +PluginInstall +qall
 # Install bumblebee-status module dependencies
 sudo python -m pip install psutil
 
+# Fix Discord crackling
+sudo vim /etc/pulse/default.pa +"g/load-module module-udev-detect/normal A tsched=0" +wq
+
 # Make grub config
 sudo sh ~/scripts/grub-update
 sudo systemctl enable lightdm
