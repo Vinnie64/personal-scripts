@@ -54,20 +54,14 @@ git clone https://github.com/VundleVim/Vundle.vim.git /home/$username/.vim/bundl
 # Install bumblebee-status for i3-gaps
 git clone https://github.com/tobi-wan-kenobi/bumblebee-status /home/$username/.config/bumblebee-status
 
-# Install yaourt
-sudo pacman -S --needed base-devel git wget yajl
-git clone https://aur.archlinux.org/package-query.git
-cd package-query/
+# Install yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
 makepkg -si
 cd ..
-git clone https://aur.archlinux.org/yaourt.git
-cd yaourt/
-makepkg -si
-cd ..
-sudo rm -dR yaourt/ package-query/
 
 # Install AUR packages
-yaourt -S $(curl -fsSL https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/aur_install)
+yay -S $(curl -fsSL https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/aur_install)
 
 # Install Oh-My-Zsh!
 export ZSH=/home/$username/.oh-my-zsh
