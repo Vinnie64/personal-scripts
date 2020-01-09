@@ -1,5 +1,6 @@
 #!/bin/sh
 i3-msg --quiet [title=\"Alacritty scratch\"] resize set width 60 ppt height 60 ppt
+i3-msg --quiet [title=\"Alacritty scratch\"] mark add scratchmark
 i3-msg --quiet [title=\"Alacritty scratch\"] move scratchpad
 zsh
 
