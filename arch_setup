@@ -104,4 +104,14 @@ echo "Remember to set up the following:
 
 - X (check /etc/X11/xorg.conf)
 - lightdm
-- lightdm-mini-greeter"
+- lightdm-mini-greeter
+
+And most importantly:
+If you are NOT Fitti, you might want to remove
+.muttrc, .offlineimaprc and .notmuch-config.
+Additionally, change the workspace monitor
+assignments in ~/.config/i3/config if you
+have a multi-monitor setup, and remove the lines
+that auto start the mail services. You can also
+do sudo pacman -R protonmail-bridge-bin to remove
+the ProtonMail Bride."
