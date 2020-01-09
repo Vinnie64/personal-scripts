@@ -1,0 +1,4 @@
+#!/bin/zsh
+dotud
+scripts_script
+echo "Scripts folder updated"
