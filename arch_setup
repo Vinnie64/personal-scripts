@@ -80,7 +80,7 @@ sudo rm -f .zshrc .vimrc .tmux.conf
 mkdir -p /home/$username/.config/i3/
 mkdir -p /home/$username/.config/alacritty/
 sudo mkdir -p /etc/X11/xorg.conf.d/
-sudo python /home/$username/dotfiles/export.py
+sudo python /home/$username/dotfiles/export.py $username
 
 # Set default shell to zsh
 chsh -s /bin/zsh
