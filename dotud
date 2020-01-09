@@ -1,3 +1,4 @@
 #!/bin/zsh
 dotfiles_script
 suexport
+echo "Configuration updated"
