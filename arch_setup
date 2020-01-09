@@ -59,6 +59,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd ..
+rm -rf yay
 
 # Install AUR packages
 yay -S $(curl -fsSL https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/aur_install)
