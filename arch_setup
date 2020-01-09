@@ -1,7 +1,15 @@
 #!/bin/sh
 
-# cd to /home/fitti
-cd /home/fitti
+# Create the user and switch to user
+read -p "Pick a username: " username
+useradd -m $username
+echo "Now pick a password"
+passwd $username
+echo "Log in as your new username!"
+su $username
+
+# cd to /home/$username
+cd /home/$username
 
 # Acticate multilib
 sudo vim /etc/pacman.conf +"g/\#\[multilib\]/normal 0xjx" +wq
@@ -31,20 +39,20 @@ nvidia-modprobe
 python -c "$(curl -fsSl https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/desktop_or_laptop)"
 
 # Install scripts repo
-git clone https://github.com/fittiboy/personal-scripts ~/scripts
-chmod +x ~/scripts/*
+git clone https://github.com/fittiboy/personal-scripts /home/$username/scripts
+chmod +x /home/$username/scripts/*
 
 # Make config dir
-mkdir -p $HOME/.config
+mkdir -p /home/$username/.config
 
 # Clone dotfiles repo
-git clone https://github.com/fittiboy/dotfiles ~/dotfiles
+git clone https://github.com/fittiboy/dotfiles /home/$username/dotfiles
 
 # Install Vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git /home/$username/.vim/bundle/Vundle.vim
 
 # Install bumblebee-status for i3-gaps
-git clone https://github.com/tobi-wan-kenobi/bumblebee-status ~/.config/bumblebee-status
+git clone https://github.com/tobi-wan-kenobi/bumblebee-status /home/$username/.config/bumblebee-status
 
 # Install yaourt
 sudo pacman -S --needed base-devel git wget yajl
@@ -62,17 +70,17 @@ sudo rm -dR yaourt/ package-query/
 yaourt -S $(curl -fsSL https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/aur_install)
 
 # Install Oh-My-Zsh!
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=/home/$username/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Remove any old configs
 sudo rm -f .zshrc .vimrc .tmux.conf
 
 # Export config files
-mkdir -p $HOME/.config/i3/
-mkdir -p $HOME/.config/alacritty/
+mkdir -p /home/$username/.config/i3/
+mkdir -p /home/$username/.config/alacritty/
 sudo mkdir -p /etc/X11/xorg.conf.d/
-sudo python3.8 $HOME/dotfiles/export.py
+sudo python /home/$username/dotfiles/export.py
 
 # Set default shell to zsh
 chsh -s /bin/zsh
@@ -87,7 +95,7 @@ sudo python -m pip install psutil
 sudo vim /etc/pulse/default.pa +"g/load-module module-udev-detect/normal A tsched=0" +wq
 
 # Make grub config
-sudo sh ~/scripts/grub-update
+sudo sh /home/$username/scripts/grub-update
 sudo systemctl enable lightdm
 sudo systemctl enable NetworkManager
 sudo nvidia-xconfig
