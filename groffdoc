@@ -1,4 +1,4 @@
 #!/bin/sh
-mkdir $HOME/$1
-cd $HOME/$1
-vim $1.ms
+mkdir $HOME/Documents/$1
+cd $HOME/Documents/$1
+vim $1.mom
