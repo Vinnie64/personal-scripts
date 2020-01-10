@@ -91,9 +91,15 @@ sudo vim /etc/pulse/default.pa +"g/load-module module-udev-detect/normal A tsche
 
 # Make grub config
 sudo sh /home/$username/scripts/grub-update
+
+# Enable services
 sudo systemctl enable lightdm
 sudo systemctl enable NetworkManager
+
+# Make nvidia X11 config
 sudo nvidia-xconfig
+
+# Inform the user
 echo "Restart your terminal for all changes to take effect!"
 echo "Remember to set up the following:
 
