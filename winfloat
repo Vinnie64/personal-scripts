@@ -1,0 +1,13 @@
+#!/bin/sh
+sudo rm /tmp/winclass
+xprop | grep CLASS | vim +"normal \$F\"d0" +"w /tmp/winclass" +q -
+pushd ~/dotfiles
+git pull -q
+vim config +"g/WINFLOAT/normal ofor_window [class=$(cat /tmp/winclass)] floating enable0x" +wq
+sh ~/scripts/suexport
+git add config
+git commit -m "Make a window floating via winfloat script"
+git push -q
+i3-msg "[class=$(cat /tmp/winclass)] floating enable"
+i3-msg reload
+popd
