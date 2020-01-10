@@ -8,8 +8,10 @@ passwd $username
 echo "Log in as your new username!"
 su $username
 
-# cd to /home/$username
+# cd to /home/$username and create some directories
 cd /home/$username
+mkdir Documents
+mkdir Downloads
 
 # Acticate multilib
 sudo vim /etc/pacman.conf +"g/\#\[multilib\]/normal 0xjx" +wq
