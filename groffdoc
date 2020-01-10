@@ -1,4 +1,4 @@
 #!/bin/sh
 mkdir $HOME/Documents/$1
 cd $HOME/Documents/$1
-vim $1.mom
+vim $1.mom +"set ft=mom"
