@@ -60,7 +60,7 @@ acpid
 cronie
 yajl
 ttf-font-awesome
-compton
+picom
 nm-connection-editor
 network-manager-applet
 apache
