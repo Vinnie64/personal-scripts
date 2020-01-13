@@ -4,6 +4,6 @@ acpi -b | awk -F'[,:%]' '{print $2, $3}' | {
 
 	if [ "$status" = Discharging -o "$status" = Unknown -a "$capacity" -lt 5 ]; then
 		logger "Critical battery threshold"
-		systemctl hibernate
+		systemctl suspend
 	fi
 }
