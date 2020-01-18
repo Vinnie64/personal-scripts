@@ -16,14 +16,6 @@ mkdir Downloads
 # Acticate multilib
 sudo vim /etc/pacman.conf +"g/\#\[multilib\]/normal 0xjx" +wq
 
-# Install ProtonMail Bridge
-mkdir pmb
-cd pmb
-wget https://protonmail.com/download/PKGBUILD
-makepkg -si
-cd ..
-rm -rf pmb
-
 # Sync time
 sudo timedatectl set-ntp true
 sudo pacman -Syu

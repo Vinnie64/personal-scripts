@@ -16,7 +16,6 @@ gnome-keyring
 i3-gaps
 imagemagick
 lightdm
-neomutt
 mpv
 networkmanager
 nnn
@@ -27,7 +26,6 @@ nvidia
 nvidia-prime
 nvidia-utils
 obs-studio
-offlineimap
 otf-fantasque-sans-mono
 ttf-fantasque-sans-mono
 pango
