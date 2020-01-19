@@ -1,0 +1,2 @@
+#!/bin/sh
+xinput set-prop $(xinput list | grep "Mionix Castor  " | awk '{print substr($7,4)}') "libinput Scroll Method Enabled" 0, 0, 1
