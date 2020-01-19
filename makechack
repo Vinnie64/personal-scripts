@@ -1,0 +1,5 @@
+#!/bin/sh
+mkdir -p ~/projects/hacks/learn_c/$1
+cd ~/projects/hacks/learn_c/$1
+touch $1.c
+vim $1.c
