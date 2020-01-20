@@ -96,6 +96,11 @@ sudo systemctl enable NetworkManager
 # Make nvidia X11 config
 sudo nvidia-xconfig
 
+# Set up cronjobs
+sudo systemctl enable cronie
+sudo systemctl start cronie
+crontab ~/.crontab
+
 # Inform the user
 echo "Restart your terminal for all changes to take effect!"
 echo "Remember to set up the following:
