@@ -2,7 +2,7 @@
 dotud
 scripts_script
 echo "Scripts folder updated"
-if [ $1 = -d ] ; then
+if [ $1 -a $1 = -d ] ; then
     echo "Updating OneDrive"
     onedrive --synchronize
 fi
