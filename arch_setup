@@ -100,6 +100,7 @@ sudo nvidia-xconfig
 sudo systemctl enable cronie
 sudo systemctl start cronie
 crontab ~/.crontab
+sudo crontab ~/.sudocron
 
 # Inform the user
 echo "Restart your terminal for all changes to take effect!"

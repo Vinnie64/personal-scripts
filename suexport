@@ -1,3 +1,4 @@
 #!/bin/sh
 sudo python /home/$USER/dotfiles/export.py $USER
 crontab ~/.crontab
+sudo crontab ~/.sudocron
