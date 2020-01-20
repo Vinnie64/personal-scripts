@@ -16,6 +16,9 @@ mkdir Downloads
 # Acticate multilib
 sudo vim /etc/pacman.conf +"g/\#\[multilib\]/normal 0xjx" +wq
 
+# Set pacman.conf options
+sudo vim /etc/pacman.conf +"g/\#Color/normal 0xOILoveCandy" +wq
+
 # Sync time
 sudo timedatectl set-ntp true
 sudo pacman -Syu
