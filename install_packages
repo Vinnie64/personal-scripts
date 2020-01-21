@@ -83,7 +83,7 @@ lib32-alsa-plugins
 pavucontrol
 tree
 xsel
-screenfetch
+neofetch
 playerctl
 pacutils
 
