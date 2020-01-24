@@ -23,7 +23,6 @@ noto-fonts
 noto-fonts-emoji
 npm
 nvidia
-nvidia-prime
 nvidia-utils
 obs-studio
 otf-fantasque-sans-mono
@@ -46,7 +45,6 @@ xorg-xlsfonts
 alsa-utils
 nvidia-settings
 vulkan-intel
-obs-studio
 pacman-contrib
 thunar
 ttf-liberation
@@ -56,7 +54,6 @@ ntp
 gv
 acpid
 cronie
-yajl
 ttf-font-awesome
 picom
 nm-connection-editor
@@ -86,4 +83,3 @@ xsel
 neofetch
 playerctl
 pacutils
-
