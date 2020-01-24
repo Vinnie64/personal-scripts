@@ -21,29 +21,31 @@ sudo vim /etc/pacman.conf +"g/\#Color/normal 0xOILoveCandy" +wq
 
 # Sync time
 sudo timedatectl set-ntp true
+
+# Update and install pacman-contrib
 sudo pacman -Syu
 sudo pacman -S pacman-contrib
 
 # Update mirrorlist
 echo "Updating mirror list... one moment please"
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/mirrorlist-update)"
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/TheRealYougCraft/personal-scripts/master/mirrorlist-update)"
 
 # Install packages
-sudo pacman -S $(curl -fsSL https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/install_packages)
+sudo pacman -S $(curl -fsSL https://raw.githubusercontent.com/TheRealYougCraft/personal-scripts/master/install_packages)
 nvidia-modprobe
 
 # Specify Laptop or desktop
-python -c "$(curl -fsSl https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/desktop_or_laptop)"
+python -c "$(curl -fsSl https://raw.githubusercontent.com/TheRealYougCraft/personal-scripts/master/desktop_or_laptop)"
 
 # Install scripts repo
-git clone https://github.com/fittiboy/personal-scripts /home/$username/scripts
+git clone https://github.com/TheRealYougCraft/personal-scripts /home/$username/scripts
 chmod +x /home/$username/scripts/*
 
 # Make config dir
 mkdir -p /home/$username/.config
 
 # Clone dotfiles repo
-git clone https://github.com/fittiboy/dotfiles /home/$username/dotfiles
+git clone https://github.com/TheRealYougCraft/dotfiles /home/$username/dotfiles
 
 # Install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git /home/$username/.vim/bundle/Vundle.vim
@@ -59,7 +61,7 @@ cd ..
 rm -rf yay
 
 # Install AUR packages
-yay -S $(curl -fsSL https://raw.githubusercontent.com/Fittiboy/personal-scripts/master/aur_install)
+yay -S $(curl -fsSL https://raw.githubusercontent.com/TheRealYougCraft/personal-scripts/master/aur_install)
 
 # Install Oh-My-Zsh!
 export ZSH=/home/$username/.oh-my-zsh
@@ -103,14 +105,21 @@ crontab ~/.crontab
 sudo crontab ~/.sudocron
 
 # Inform the user
-echo "Restart your terminal for all changes to take effect!"
+echo "Restart your terminal for more changes to take effect!"
 echo "Remember to set up the following:
 
 - X (check /etc/X11/xorg.conf)
 - lightdm
 - lightdm-mini-greeter
+- lxappearance
 
 Additionally:
 Change the workspace monitor
-assignments in ~/.config/i3/config if you
-have a multi-monitor setup."
+assignments in ~/dotfiles/config if you
+have a multi-monitor setup.
+Remember to always make changes in the
+git repos by using either 'dotfl' or 'scpt'
+to pull changes first. Then for changed dotfiles
+you can run suexport.
+
+All changes will take effect on reboot."
