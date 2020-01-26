@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo vim -u /home/fitti/.vimrc /srv/http/index.html
+sudo vim -u ~/.vimrc /srv/http/index.html
