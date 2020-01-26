@@ -1,9 +1,7 @@
 #!/bin/python
-from pathlib import Path
+from sys import argv
 
-
-home = str(Path.home())
-
+username = argv[1]
 
 def main():
     try:
@@ -22,7 +20,7 @@ def main():
         makefile("")
 
 def makefile(string):
-    with open(f"{home}/.laptop", "w") as laptopfile:
+    with open(f"/home/{username}/.laptop", "w") as laptopfile:
         laptopfile.write(string)
     print("The ~/.laptop file has been created, specifying",
           "whether or not battery status gets shown on your",
