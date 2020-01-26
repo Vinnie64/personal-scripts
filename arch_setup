@@ -35,7 +35,7 @@ sudo pacman -S $(curl -fsSL https://raw.githubusercontent.com/TheRealYougCraft/p
 nvidia-modprobe
 
 # Specify Laptop or desktop
-python -c "$(curl -fsSl https://raw.githubusercontent.com/TheRealYougCraft/personal-scripts/master/desktop_or_laptop)"
+python -c "$(curl -fsSl https://raw.githubusercontent.com/TheRealYougCraft/personal-scripts/master/desktop_or_laptop)" $username
 
 # Install scripts repo
 git clone https://github.com/TheRealYougCraft/personal-scripts /home/$username/scripts
