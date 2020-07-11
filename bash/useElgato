@@ -1,0 +1,5 @@
+# Run with . ./script
+
+cd ~/elgato-gchd/build/src/
+
+sudo ./gchd
