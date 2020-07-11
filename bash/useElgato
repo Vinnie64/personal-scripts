@@ -2,4 +2,4 @@
 
 cd ~/elgato-gchd/build/src/
 
-sudo ./gchd
+sudo ./gchd -c rgb
